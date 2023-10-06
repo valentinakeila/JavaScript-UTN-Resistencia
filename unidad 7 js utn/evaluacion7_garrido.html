@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+</head>
+<body>
+
+<!--Abrir el archivo evaluacion7.html y guardarlo como evaluacion7_apellido.html (ej. evaluacion7_rodriguez.html)
+Desarrollar un formulario validado con las siguientes características:
+Al menos 3 campos.
+3 de esos campos deben ser obligatorios.
+Utilizar como mínimo 3 tipos de input distintos (por ejemplo: email, date, number).
+Un pattern.-->
+
+
+
+
+    <h1>Evaluación Unidad VII</h1>
+        <h2>Datos de suscripción:</h2>
+        <div id="formu">
+    <form action="">
+
+        <label>Nombre de Usuario:</label>
+        <input type="text" name="nombre" placeholder="Nombre de usuario" maxlength="15"  pattern="[A-Za-z0-9]+" id="nombre" required>
+        <br>
+        <label>Edad:</label>
+        <input type="number" name="Edad" placeholder="Edad" min="18" max="60" id="edad" required>
+        <br>
+        <label>Email:</label>
+        <input type="email" name="Email" placeholder="email@example.com" id="mail" size="20">
+        <br>
+        <label>Fecha de nacimiento: </label>
+        <input type="date" name="Fecha" id="fecha">
+        <br>
+        
+        <input type="submit" value="Enviar" name="Enviar" id="submit">
+    </form>
+    <script>
+        function iniciar(){
+            
+            
+            nombre= document.getElementById("nombre");
+            edad= document.getElementById("edad");
+            mail= document.getElementById("mail");
+            fecha= document.getElementById("fecha");
+           
+            
+            
+            
+            nombre.addEventListener("input", validacion, false);
+            apellido.addEventListener("input", validacion, false);
+            edad.addEventListener("input", validacion, false);
+            fecha.addEventListener("input", validacion, false);
+            
+            document.getElementById("submit").addEventListener("click", enviar, false);
+        }
+        function validacion(e){
+            var elemento=e.target;
+            elemento.style.background='red';
+         }
+      function enviar(){
+        var valido= document.informacion.checkValidity();
+        if(valido){
+            document.informacion.submit();
+           
+        }
+
+   
+      }
+        window.addEventListener("load", iniciar, false)
+    </script>
+
+        
+    
+  
+</body>
+</html>
+    
+    

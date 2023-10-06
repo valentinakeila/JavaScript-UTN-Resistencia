@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Evaluación 3</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+
+
+    <!--Abrir el archivo evaluacion3.html para realizar el ejercicio y guardarlo como evaluacion3_apellido.html (por ejemplo: evaluacion3_perez.html)
+Generar un script que contenga variables y realizar por medio de los operadores una suma, una resta, una multiplicación y una división que se muestren dentro de la estructura de HTML.
+Generar un array con sus cinco películas y/o series favoritas y listarlas en pantalla (utilizando un bucle), ordenadas alfabéticamente.
+Podés utilizar HTML y CSS libremente para darle formato y diseño a la evaluació-->
+	
+		<h1>Evaluación Unidad III</h1>
+        <h1>Listado de series favoritas:</h1>
+		<script type="text/javascript">
+
+var series = ["House of the dragon","Game of thrones","the good doctor","Anatomia de grey"]
+series.sort()
+
+for(var i=0; i<series.length; i++){
+document.write(series[i]+'</p>')}
+
+document.write( 'Resultado de las cuentas:' + '<p>')
+
+var numero1 = 10; 
+var numero2 = 5;   
+resultado1 = numero1 / numero2;  
+resultado2 = 3 + numero1; 
+resultado3 = numero1 - numero2;
+resultado4 = numero1*numero2  
+
+document.write("Resultado de la división: " + resultado1 + '<p>')
+document.write("Resultado de la suma: " + resultado2 + '<p>')
+document.write("Resultado de la resta: " + resultado3 + '<p>')
+document.write("Resultado de la multiplicación: " + resultado4 + '<p>')
+
+
+
+
+
+
+            
+		</script>
+	
+</body>
+</html>

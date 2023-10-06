@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!--ESTO ES EL HEADER-->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">UTN e-learning</a>
+            <ul class="navbar-nav me-auto mb-0.9">
+              <li class="nav-item mt-1.5">
+                <a class="nav-link active" aria-current="page" href="proyecto_garrido.html">Home</a>
+              </li>  
+          
+          </div>
+          </div>
+        </nav>
+      </header>
+
+      <h1 class="visually-hidden">Heroes examples</h1>
+
+      <div class="px-4 py-5 my-5 text-center">
+      
+        <h1 class="ganar"> HAS GANADO!</h1>
+        <h1 class="perder">HAS PERDIDO</h1>
+      </div>
+
+
+      <script type="text/javascript">
+
+        alert('¡Juguemos a adivinar la letra!  (Ponga las respuestas en mayúscula)')
+        alert('Si adivina la letra, "HAS GANADO" se pintará de verde, si se equivoca se pintará "HAS PERDIDO" en rojo.')
+
+        var letras = ['T', 'R', 'W', 'I', 'U', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'A', 'O'];
+        var numero = prompt("Introduce un número entre el 0 y 25");
+        
+        if(numero < 0 || numero >= 26) {
+        alert("El número ingresado no es válido");
+        }else {
+            var letra = prompt("Introduce una letra en mayúscula)");
+        letra = letra.toUpperCase();
+        var letraCalculada = letras[numero % 26];
+        if(letraCalculada != letra) {
+            var p = document.getElementsByClassName("perder");
+            p[0].style.color = "red"
+            
+        }else {
+        var p = document.getElementsByClassName("ganar");
+            p[0].style.color = "green"
+        }}
+
+      
+
+            </script>
+
+
+
+
+</body>
+</html>
